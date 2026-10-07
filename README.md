@@ -1,0 +1,58 @@
+# Hippo's Store — Atividade 3
+
+Projeto acadêmico de e-commerce desenvolvido com HTML, CSS e JavaScript puro.
+
+## Funcionalidades JavaScript
+- Adição e gerenciamento do carrinho.
+- Pesquisa dinâmica de produtos.
+- Favoritos e filtros.
+- Alternância entre modo claro e escuro com `localStorage`.
+- Data e hora atualizadas no rodapé.
+- Mensagens dinâmicas de confirmação.
+
+## Estrutura
+- `index.html` — estrutura da página.
+- `style.css` — estilos e responsividade.
+- `script.js` — funcionalidades JavaScript.
+- `assets/` — logos e imagens dos produtos.
+
+
+### Atualização — ofertas e cupons
+- Contador regressivo real de 02:45:18, persistente no navegador.
+- Cupom HIPPO10: R$ 10 de desconto em compras a partir de R$ 80.
+- Cupom HIPPO20: R$ 20 de desconto em compras a partir de R$ 150.
+- Cupom HIPPO30: R$ 30 de desconto em compras a partir de R$ 250.
+- O desconto é calculado automaticamente no carrinho e o cupom pode ser removido.
+
+
+### Correção da versão
+- Carrinho passou a usar IDs estáveis dos produtos.
+- Dados antigos/corrompidos do carrinho não são mais reaproveitados.
+- Cupom é removido automaticamente quando o carrinho fica vazio.
+- Linha de desconto fica realmente oculta quando não há cupom válido.
+- Imagem do carrinho possui fallback local para evitar imagem quebrada.
+
+
+### Atualização — Destaques e finalização
+- Seção de produtos em destaque com detalhes ao clicar.
+- Compra do destaque com 5% OFF exclusivo.
+- Cupom DESTAQUE5 aplicado somente ao produto em destaque.
+- Descontos não acumulam: apenas um cupom regular OU o cupom do destaque.
+- Ao remover o produto que originou o desconto de destaque, o desconto é removido.
+- Finalização apresenta página de confirmação com número do pedido, itens, subtotal, desconto e total.
+
+
+### Atualização — regra dos cupons
+- Produtos em destaque recebem 5% OFF automaticamente.
+- Produtos em destaque não entram na base de cálculo dos cupons por valor.
+- O valor mínimo dos cupons é calculado somente sobre produtos que não estão em destaque.
+- A mensagem "Cupons disponíveis" aparece no carrinho quando o valor elegível atinge um mínimo.
+- Apenas um cupom regular pode ser usado por compra; cupons regulares não acumulam.
+- O desconto de 5% dos destaques é independente do cupom por valor e nunca é aplicado duas vezes ao mesmo produto.
+
+
+### Imagens dos produtos
+
+Nesta versão, as fotos dos produtos são carregadas por URLs externas da internet para facilitar o protótipo acadêmico. No futuro, quando a loja tiver suas próprias fotos, basta substituir o atributo `src` das imagens dos produtos no `index.html` pelas imagens da pasta `assets/produtos/` (ou pelas URLs do seu servidor/CDN).
+
+> **Importante para a loja real:** antes de publicar comercialmente, substitua as imagens demonstrativas por fotos próprias ou imagens com licença/autorização de uso.
